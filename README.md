@@ -11,3 +11,4 @@ Tutorials and sample code for Android Mobile Development
 2. Android UI: RelativeLayout
 3. Android UI: ListView
 4. Android UI. GridView
+4. Android UI. RecyclerView Simple
