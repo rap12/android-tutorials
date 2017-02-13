@@ -9,41 +9,44 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 
+//RecyclerView pushes the use of ViewHolder Pattern to improve performance.
+
 public class ItemArrayAdapter extends RecyclerView.Adapter<ItemArrayAdapter.ViewHolder> {
 
-    //All methods in this adapter are required for a bare minimum recyclerview adapter
-    private int listItemLayout;
+
     private ArrayList<Item> itemList;
+
+
     // Constructor of the class
-    public ItemArrayAdapter(int layoutId, ArrayList<Item> itemList) {
-        listItemLayout = layoutId;
+    public ItemArrayAdapter(ArrayList<Item> itemList) {
         this.itemList = itemList;
     }
 
-    // get the size of the list
+    // Get the size of the list
     @Override
     public int getItemCount() {
         return itemList == null ? 0 : itemList.size();
     }
 
 
-    // specify the row layout file and click for each row
+    // Assign and create the view layout file
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(listItemLayout, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
         ViewHolder myViewHolder = new ViewHolder(view);
         return myViewHolder;
     }
 
-    // load data in each row element
+    // Bind data in each row element
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int listPosition) {
         TextView item = holder.item;
         item.setText(itemList.get(listPosition).getName());
     }
 
-    // Static inner class to initialize the views of rows
-    static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+    // Class to initialize the views of rows
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView item;
         public ViewHolder(View itemView) {
             super(itemView);

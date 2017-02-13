@@ -31,12 +31,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void loadFruits(){
-        listFruit.add(new Fruit(R.drawable.fruit_banana,"Banana"));
-        listFruit.add(new Fruit(R.drawable.fruit_apple,"Apple"));
-        listFruit.add(new Fruit(R.drawable.fruit_grapes,"Grapes"));
-        listFruit.add(new Fruit(R.drawable.fruit_blueberry,"Blueberry"));
-        listFruit.add(new Fruit(R.drawable.fruit_lemon,"Lemon"));
-        listFruit.add(new Fruit(R.drawable.fruit_strawberry,"Strawberry"));
+
+            listFruit.add(new Fruit(R.drawable.fruit_banana, "Banana"));
+            listFruit.add(new Fruit(R.drawable.fruit_apple, "Apple"));
+            listFruit.add(new Fruit(R.drawable.fruit_grapes, "Grapes"));
+            listFruit.add(new Fruit(R.drawable.fruit_blueberry, "Blueberry"));
+            listFruit.add(new Fruit(R.drawable.fruit_lemon, "Lemon"));
+            listFruit.add(new Fruit(R.drawable.fruit_strawberry, "Strawberry"));
+
 
     }
 

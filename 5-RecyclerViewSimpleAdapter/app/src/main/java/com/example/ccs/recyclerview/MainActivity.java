@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         // Initializing list view with the custom adapter
         ArrayList <Item> itemList = new ArrayList<Item>();
 
-        ItemArrayAdapter itemArrayAdapter = new ItemArrayAdapter(R.layout.list_item, itemList);
+        ItemArrayAdapter itemArrayAdapter = new ItemArrayAdapter(itemList);
         recyclerView = (RecyclerView) findViewById(R.id.item_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
